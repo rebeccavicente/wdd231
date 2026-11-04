@@ -1,0 +1,93 @@
+
+/* TABLET AND DESKTOP DESIGN */
+
+@media (min-width: 700px) {
+
+    /* HEADER */
+
+    .site-header {
+        flex-wrap: nowrap;
+        padding: 0.7rem max(2rem, calc((100% - 1100px) / 2));
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    /* HORIZONTAL NAVIGATION */
+
+    .primary-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: auto;
+        padding: 0;
+    }
+
+    .primary-nav a {
+        padding: 0.65rem 1rem;
+    }
+
+    /* MAIN GRID */
+
+    .content-grid {
+        grid-template-columns: 1.5fr 1fr;
+        align-items: stretch;
+    }
+
+    .about-panel {
+        grid-column: 1;
+    }
+
+    .photo-panel {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .certificate-panel {
+        grid-column: 1 / -1;
+    }
+
+    /* COURSE FILTERS */
+
+    .course-filters {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* FOOTER */
+
+    .site-footer {
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        padding: 1.5rem max(2rem, calc((100% - 1100px) / 2));
+        text-align: left;
+    }
+
+    .social-links {
+        justify-content: flex-start;
+    }
+
+    .last-modified {
+        justify-self: end;
+        text-align: right;
+    }
+}
+
+/* LARGE DESKTOP */
+
+@media (min-width: 1000px) {
+
+    .content-grid {
+        grid-template-columns: 1.3fr 0.7fr;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}

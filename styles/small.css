@@ -1,0 +1,342 @@
+
+/* MOBILE FIRST DESIGN */
+
+:root {
+    --navy: #173b63;
+    --blue: #24639a;
+    --pale-blue: #eaf2f9;
+    --light: #f5f7fa;
+    --white: #ffffff;
+    --ink: #202b36;
+    --muted: #536273;
+    --border: #cbd5df;
+    --completed: #e2f2e8;
+    --completed-border: #287344;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    font-family: "Roboto", sans-serif;
+    color: var(--ink);
+    background: var(--light);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+/* HEADER */
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    color: var(--white);
+    background: var(--navy);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.brand img {
+    flex-shrink: 0;
+}
+
+.brand span {
+    overflow-wrap: anywhere;
+}
+
+/* HAMBURGER MENU */
+
+.menu-toggle {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid white;
+    border-radius: 6px;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+    content: "";
+}
+
+.menu-icon {
+    position: relative;
+}
+
+.menu-icon::before {
+    position: absolute;
+    top: -7px;
+}
+
+.menu-icon::after {
+    position: absolute;
+    top: 7px;
+}
+
+/* NAVIGATION */
+
+.primary-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.5rem 1rem 1rem;
+    background: var(--navy);
+}
+
+.primary-nav.open {
+    display: flex;
+}
+
+.primary-nav a {
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.primary-nav a[aria-current="page"] {
+    color: var(--navy);
+    background: white;
+}
+
+.primary-nav a:hover,
+.primary-nav a:focus-visible {
+    color: var(--navy);
+    background: var(--pale-blue);
+}
+
+/* MAIN CONTENT */
+
+main {
+    width: min(100% - 2rem, 1100px);
+    margin: 1.5rem auto 2.5rem;
+}
+
+h1 {
+    margin: 0 0 1rem;
+    color: var(--navy);
+    font-size: clamp(1.8rem, 5vw, 2.4rem);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+}
+
+/* SECTIONS */
+
+.panel {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 8px rgb(23 59 99 / 10%);
+}
+
+.panel h2 {
+    margin: 0;
+    padding: 0.7rem 1rem;
+    color: white;
+    background: var(--navy);
+    font-size: 1.15rem;
+    text-align: center;
+}
+
+.panel-content {
+    padding: 1rem 1.1rem;
+}
+
+.panel-content p:first-child {
+    margin-top: 0;
+}
+
+.panel-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* PHOTO */
+
+.student-photo {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin: 1rem auto;
+    border-radius: 8px;
+
+}
+
+/* COURSE FILTER BUTTONS */
+
+.course-filters {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+    padding: 1rem 1rem 0;
+}
+
+.filter-button {
+    min-height: 42px;
+    padding: 0.55rem 0.8rem;
+    border: 1px solid var(--navy);
+    border-radius: 5px;
+    color: var(--navy);
+    background: white;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.filter-button:hover,
+.filter-button:focus-visible,
+.filter-button.active {
+    color: white;
+    background: var(--navy);
+}
+
+/* COURSE INFORMATION */
+
+.credit-total {
+    margin: 0.9rem 1rem;
+    color: var(--navy);
+    font-weight: 700;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+    padding: 0 1rem;
+}
+
+.course-card {
+    padding: 0.85rem;
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--blue);
+    border-radius: 6px;
+    background: white;
+}
+
+.course-card h3 {
+    margin: 0 0 0.25rem;
+    color: var(--navy);
+    font-size: 1rem;
+}
+
+.course-card p {
+    margin: 0.2rem 0;
+}
+
+/* COMPLETED COURSES */
+
+.course-card.completed {
+    border-left-color: var(--completed-border);
+    background: var(--completed);
+}
+
+.course-card.completed h3::after {
+    content: " ✓";
+    color: var(--completed-border);
+}
+
+.completion-note {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.completion-key {
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--completed-border);
+    border-radius: 3px;
+    background: var(--completed);
+}
+
+/* FOOTER */
+
+.site-footer {
+    display: grid;
+    justify-items: center;
+    gap: 0.8rem;
+    padding: 1.5rem 1rem;
+    color: white;
+    background: var(--navy);
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.social-links a {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+    color: var(--navy);
+    background: white;
+}
+
+.copyright p,
+.last-modified {
+    margin: 0.15rem 0;
+}
+
+.last-modified {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    font-size: 0.9rem;
+}
+
+/* KEYBOARD ACCESSIBILITY */
+
+:focus-visible {
+    outline: 3px solid #f0bd4a;
+    outline-offset: 3px;
+}

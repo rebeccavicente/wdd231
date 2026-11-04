@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My WDD231 course homepage featuring my coursework, web development projects, and programming certificate.">
+    <meta name="author" content="Rebecca Vicente">
+    <title>WDD231 | Home</title>
+
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <img src="images/logo.svg" alt="" width="48" height="48">
+            <span>Rebecca Vicente</span>
+        </a>
+
+        <button class="menu-toggle" id="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="primary-nav">
+            <span class="menu-icon"></span>
+        </button>
+
+        <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="chamber/index.html">Chamber</a>
+            <a href="final/index.html">Final</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+
+        <div class="content-grid">
+
+            <section class="panel about-panel">
+                <h2>About Me</h2>
+                <div class="panel-content">
+                    <p>
+                        Hello! My name is Rebecca Vicente.
+                        I am studying web development and learning
+                        how to create responsive and accessible websites.
+                    </p>
+
+                    <p>
+                        I was born in Campinas, São Paulo, Brazil.
+                        This is my course homepage for WDD231.
+                    </p>
+                </div>
+            </section>
+
+            <section class="panel photo-panel">
+                <h2>Student Photo</h2>
+
+                <img
+                    src="images/profile.jpg"
+                    alt="Portrait of Rebecca Vicente"
+                    class="student-photo"
+                    loading="lazy"
+                    width="400"
+                    height="400">
+            </section>
+            
+
+            <section class="panel certificate-panel">
+                <h2>Web and Computer Programming Certificate</h2>
+
+                <div class="course-filters" role="group" aria-label="Filter courses">
+                    <button class="filter-button active"
+                        type="button"
+                        data-filter="ALL"
+                        aria-pressed="true">
+                        All Courses
+                    </button>
+
+                    <button class="filter-button"
+                        type="button"
+                        data-filter="WDD"
+                        aria-pressed="false">
+                        WDD Courses
+                    </button>
+
+                    <button class="filter-button"
+                        type="button"
+                        data-filter="CSE"
+                        aria-pressed="false">
+                        CSE Courses
+                    </button>
+                </div>
+
+                <p class="credit-total" id="credit-total" aria-live="polite">
+                    Total credits: 0
+                </p>
+
+                <div class="course-grid" id="course-list" aria-live="polite">
+                    <p>Loading courses...</p>
+                </div>
+
+                <p class="completion-note">
+                    <span class="completion-key"></span>
+                    Completed course
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="social-links">
+            <a href="https://github.com/rebeccavicente"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub profile">GH</a>
+
+            <a href="https://www.linkedin.com/in/rebeccavallezisilva/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn profile">in</a>
+
+            <a href="https://www.byupathway.edu/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="BYU Pathway">BYU</a>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; <span id="currentyear"></span> Rebecca Vicente</p>
+            <p>Campinas, São Paulo, Brazil</p>
+        </div>
+
+        <p class="last-modified">
+            Last Modification:
+            <span id="lastModified"></span>
+        </p>
+
+    </footer>
+
+</body>
+</html>
