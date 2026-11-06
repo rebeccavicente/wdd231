@@ -77,25 +77,8 @@
         justify-self: end;
         text-align: right;
     }
-}
 
-/* LARGE DESKTOP */
-
-@media (min-width: 1000px) {
-
-    .content-grid {
-        grid-template-columns: 1.3fr 0.7fr;
-    }
-
-    .course-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-/* =================================
-   CHAMBER DIRECTORY LARGE SCREENS
-================================= */
-
-@media screen and (min-width: 700px) {
+    /* CHAMBER DIRECTORY */
 
     .members-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -114,15 +97,23 @@
     .members-list .member-content {
         flex: 1;
     }
-
 }
 
-@media screen and (min-width: 1000px) {
+/* LARGE DESKTOP */
+
+@media (min-width: 1000px) {
+
+    .content-grid {
+        grid-template-columns: 1.3fr 0.7fr;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    /* CHAMBER DIRECTORY */
 
     .members-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-
-}
-
 }
