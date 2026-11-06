@@ -1,46 +1,19 @@
 
-// MOBILE NAVIGATION
-
-const menuButton = document.querySelector("#menu-button");
-const navigation = document.querySelector("#navigation");
-
-menuButton.addEventListener("click", () => {
-    navigation.classList.toggle("open");
-
-    const isOpen = navigation.classList.contains("open");
-
-    menuButton.setAttribute("aria-expanded", isOpen);
-
-    menuButton.textContent = isOpen ? "✕" : "☰";
-});
-
-
-// FOOTER DATES
-
-document.querySelector("#current-year").textContent =
-    new Date().getFullYear();
-
-document.querySelector("#last-modified").textContent =
-    document.lastModified;
-
-
-// MEMBER DIRECTORY
+// SELECT HTML ELEMENTS
 
 const membersContainer = document.querySelector("#members");
 const gridButton = document.querySelector("#grid-button");
 const listButton = document.querySelector("#list-button");
 
 
-// FETCH JSON USING ASYNC/AWAIT
+// FETCH MEMBER DATA
 
 async function getMembers() {
-
     try {
-
         const response = await fetch("data/members.json");
 
         if (!response.ok) {
-            throw new Error("Could not load member data.");
+            throw new Error("Unable to load member data.");
         }
 
         const members = await response.json();
@@ -48,18 +21,14 @@ async function getMembers() {
         displayMembers(members);
 
     } catch (error) {
-
-        console.error("Error loading members:", error);
-
+        console.error("Error:", error);
         membersContainer.innerHTML =
-            "<p>Sorry, the member directory could not be loaded.</p>";
-
+            "<p>Unable to load the business directory.</p>";
     }
-
 }
 
 
-// DISPLAY MEMBERS
+// DISPLAY MEMBER CARDS
 
 function displayMembers(members) {
 
@@ -68,48 +37,47 @@ function displayMembers(members) {
     members.forEach((member) => {
 
         const card = document.createElement("article");
-
         card.classList.add("member-card");
+
+        const membershipName = {
+            1: "Member",
+            2: "Silver Member",
+            3: "Gold Member"
+        };
 
         card.innerHTML = `
             <h2>${member.name}</h2>
 
-            <p class="tagline">${member.tagline}</p>
+            <p class="member-tagline">${member.tagline}</p>
 
-            <div class="member-details">
+            <div class="member-content">
 
                 <img
                     src="images/members/${member.image}"
                     alt="${member.name} logo"
                     loading="lazy"
+                    width="120"
+                    height="120"
                 >
 
-                <div class="member-info">
+                <div class="member-information">
+
+                    <p><strong>Address:</strong> ${member.address}</p>
+
+                    <p><strong>Phone:</strong> ${member.phone}</p>
 
                     <p>
-                        <strong>ADDRESS:</strong>
-                        ${member.address}
-                    </p>
-
-                    <p>
-                        <strong>PHONE:</strong>
-                        ${member.phone}
-                    </p>
-
-                    <p>
-                        <strong>URL:</strong>
+                        <strong>Website:</strong>
                         <a href="${member.website}"
                            target="_blank"
                            rel="noopener noreferrer">
-                            Visit Website
+                           Visit Website
                         </a>
                     </p>
 
-                    <p class="membership">
-                        Membership Level: ${member.membership}
+                    <p class="member-level">
+                        ${membershipName[member.membership] || "Member"}
                     </p>
-
-                    <p>${member.description}</p>
 
                 </div>
 
@@ -119,7 +87,6 @@ function displayMembers(members) {
         membersContainer.appendChild(card);
 
     });
-
 }
 
 
@@ -130,8 +97,8 @@ gridButton.addEventListener("click", () => {
     membersContainer.classList.add("members-grid");
     membersContainer.classList.remove("members-list");
 
-    gridButton.classList.add("selected");
-    listButton.classList.remove("selected");
+    gridButton.classList.add("active");
+    listButton.classList.remove("active");
 
     gridButton.setAttribute("aria-pressed", "true");
     listButton.setAttribute("aria-pressed", "false");
@@ -146,8 +113,8 @@ listButton.addEventListener("click", () => {
     membersContainer.classList.add("members-list");
     membersContainer.classList.remove("members-grid");
 
-    listButton.classList.add("selected");
-    gridButton.classList.remove("selected");
+    listButton.classList.add("active");
+    gridButton.classList.remove("active");
 
     listButton.setAttribute("aria-pressed", "true");
     gridButton.setAttribute("aria-pressed", "false");
@@ -155,6 +122,6 @@ listButton.addEventListener("click", () => {
 });
 
 
-// START DIRECTORY
+// INITIALIZE DIRECTORY
 
 getMembers();

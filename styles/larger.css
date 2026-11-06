@@ -90,4 +90,39 @@
     .course-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+
+/* =================================
+   CHAMBER DIRECTORY LARGE SCREENS
+================================= */
+
+@media screen and (min-width: 700px) {
+
+    .members-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .members-list .member-card {
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .members-list .member-card h2 {
+        width: 25%;
+    }
+
+    .members-list .member-content {
+        flex: 1;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+
+    .members-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
 }

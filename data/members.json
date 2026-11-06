@@ -7,18 +7,16 @@
         "phone": "(19) 3232-1001",
         "website": "https://example.com",
         "image": "campinas-tech.svg",
-        "membership": 3,
-        "description": "Technology consulting and digital solutions."
+        "membership": 3
     },
     {
         "name": "Café Central",
-        "tagline": "Coffee, Food and Community",
+        "tagline": "Coffee and Community",
         "address": "Rua Barão de Jaguara, 250, Campinas - SP",
         "phone": "(19) 3232-1002",
         "website": "https://example.com",
         "image": "cafe-central.svg",
-        "membership": 2,
-        "description": "A local coffee shop serving specialty coffee."
+        "membership": 2
     },
     {
         "name": "Verde Vida",
@@ -27,8 +25,7 @@
         "phone": "(19) 3232-1003",
         "website": "https://example.com",
         "image": "verde-vida.svg",
-        "membership": 1,
-        "description": "Sustainable products and environmentally friendly services."
+        "membership": 1
     },
     {
         "name": "Prime Imóveis",
@@ -37,8 +34,7 @@
         "phone": "(19) 3232-1004",
         "website": "https://example.com",
         "image": "prime-imoveis.svg",
-        "membership": 3,
-        "description": "Real estate sales and property management."
+        "membership": 3
     },
     {
         "name": "Saúde Campinas",
@@ -47,8 +43,7 @@
         "phone": "(19) 3232-1005",
         "website": "https://example.com",
         "image": "saude-campinas.svg",
-        "membership": 2,
-        "description": "Health and wellness services for the community."
+        "membership": 2
     },
     {
         "name": "Design Móveis",
@@ -57,8 +52,7 @@
         "phone": "(19) 3232-1006",
         "website": "https://example.com",
         "image": "design-moveis.svg",
-        "membership": 1,
-        "description": "Custom furniture and interior design."
+        "membership": 1
     },
     {
         "name": "Solar Energia",
@@ -67,7 +61,6 @@
         "phone": "(19) 3232-1007",
         "website": "https://example.com",
         "image": "solar-energia.svg",
-        "membership": 3,
-        "description": "Solar panel installation and renewable energy."
+        "membership": 3
     }
 ]
