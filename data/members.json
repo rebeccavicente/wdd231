@@ -1,0 +1,73 @@
+
+[
+    {
+        "name": "Campinas Tech Solutions",
+        "tagline": "Technology and Innovation",
+        "address": "Rua Conceição, 500, Centro, Campinas - SP",
+        "phone": "(19) 3232-1001",
+        "website": "https://example.com",
+        "image": "campinas-tech.svg",
+        "membership": 3,
+        "description": "Technology consulting and digital solutions."
+    },
+    {
+        "name": "Café Central",
+        "tagline": "Coffee, Food and Community",
+        "address": "Rua Barão de Jaguara, 250, Campinas - SP",
+        "phone": "(19) 3232-1002",
+        "website": "https://example.com",
+        "image": "cafe-central.svg",
+        "membership": 2,
+        "description": "A local coffee shop serving specialty coffee."
+    },
+    {
+        "name": "Verde Vida",
+        "tagline": "Sustainable Living",
+        "address": "Avenida Norte-Sul, 800, Campinas - SP",
+        "phone": "(19) 3232-1003",
+        "website": "https://example.com",
+        "image": "verde-vida.svg",
+        "membership": 1,
+        "description": "Sustainable products and environmentally friendly services."
+    },
+    {
+        "name": "Prime Imóveis",
+        "tagline": "Real Estate Professionals",
+        "address": "Avenida José de Souza Campos, 1200, Campinas - SP",
+        "phone": "(19) 3232-1004",
+        "website": "https://example.com",
+        "image": "prime-imoveis.svg",
+        "membership": 3,
+        "description": "Real estate sales and property management."
+    },
+    {
+        "name": "Saúde Campinas",
+        "tagline": "Health and Wellness",
+        "address": "Rua General Osório, 350, Campinas - SP",
+        "phone": "(19) 3232-1005",
+        "website": "https://example.com",
+        "image": "saude-campinas.svg",
+        "membership": 2,
+        "description": "Health and wellness services for the community."
+    },
+    {
+        "name": "Design Móveis",
+        "tagline": "Furniture and Interior Design",
+        "address": "Avenida Brasil, 650, Campinas - SP",
+        "phone": "(19) 3232-1006",
+        "website": "https://example.com",
+        "image": "design-moveis.svg",
+        "membership": 1,
+        "description": "Custom furniture and interior design."
+    },
+    {
+        "name": "Solar Energia",
+        "tagline": "Clean Energy Solutions",
+        "address": "Rua Sampainho, 180, Campinas - SP",
+        "phone": "(19) 3232-1007",
+        "website": "https://example.com",
+        "image": "solar-energia.svg",
+        "membership": 3,
+        "description": "Solar panel installation and renewable energy."
+    }
+]
