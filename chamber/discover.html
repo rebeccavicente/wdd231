@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Discover attractions, landmarks, and interesting places in Campinas, São Paulo, Brazil.">
+    <meta name="author" content="Rebecca Vicente">
+
+    <title>Discover Campinas | Chamber of Commerce</title>
+
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="" width="48" height="48">
+        <span>Campinas Chamber of Commerce</span>
+    </a>
+
+    <button class="menu-toggle" id="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="primary-nav">
+        <span class="menu-icon"></span>
+    </button>
+
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="discover.html" aria-current="page">Discover</a>
+        <a href="directory.html">Directory</a>
+        <a href="join.html">Join</a>
+    </nav>
+
+</header>
+
+<main class="discover-main">
+
+    <h1>Discover Campinas</h1>
+
+    <section class="discover-intro">
+        <h2>Explore Our Community</h2>
+        <p>
+            Campinas is a vibrant city in the state of São Paulo,
+            Brazil. Discover its parks, cultural attractions,
+            historic landmarks, and local experiences.
+        </p>
+    </section>
+
+    <div id="visit-message" class="visit-message" aria-live="polite">
+        Welcome! Let us help you discover Campinas.
+    </div>
+
+    <section class="discover-grid" aria-label="Places to discover">
+
+        <article class="discover-card">
+            <img
+                src="images/discover/taquaral.jpg"
+                alt="Lagoa do Taquaral park in Campinas"
+                width="400"
+                height="250"
+                loading="lazy">
+
+            <div class="discover-card-content">
+                <h2>Lagoa do Taquaral</h2>
+                <address>Parque Portugal, Campinas, São Paulo</address>
+                <p>
+                    A popular green space where visitors can enjoy
+                    outdoor activities, walking paths, and nature.
+                </p>
+            </div>
+        </article>
+
+        <article class="discover-card">
+            <img
+                src="images/discover/mercado-municipal.jpg"
+                alt="Mercado Municipal of Campinas"
+                width="400"
+                height="250"
+                loading="lazy">
+
+            <div class="discover-card-content">
+                <h2>Mercado Municipal</h2>
+                <address>Centro, Campinas, São Paulo</address>
+                <p>
+                    Explore a traditional market with food,
+                    local products, and a lively atmosphere.
+                </p>
+            </div>
+        </article>
+
+        <article class="discover-card">
+            <img
+                src="images/discover/bosque.jpg"
+                alt="Bosque dos Jequitibás in Campinas"
+                width="400"
+                height="250"
+                loading="lazy">
+
+            <div class="discover-card-content">
+                <h2>Bosque dos Jequitibás</h2>
+                <address>Centro, Campinas, São Paulo</address>
+                <p>
+                    A traditional urban park offering green spaces,
+                    nature, and opportunities for family visits.
+                </p>
+            </div>
+        </article>
+
+        <article class="discover-card">
+            <img
+                src="images/discover/estacao-cultura.jpg"
+                alt="Estação Cultura in Campinas"
+                width="400"
+                height="250"
+                loading="lazy">
+
+            <div class="discover-card-content">
+                <h2>Estação Cultura</h2>
+                <address>Praça Marechal Floriano, Campinas, São Paulo</address>
+                <p>
+                    A historic railway station that serves as
+                    a cultural space for events and exhibitions.
+                </p>
+            </div>
+        </article>
+
+        <article class="discover-card">
+            <img
+                src="images/discover/catedral.jpg"
+                alt="Metropolitan Cathedral of Campinas"
+                width="400"
+                height="250"
+                loading="lazy">
+
+            <div class="discover-card-content">
+                <h2>Metropolitan Cathedral</h2>
+                <address>Praça José Bonifácio, Campinas, São Paulo</address>
+                <p>
+                    Visit an important historic landmark in
+                    the heart of Campinas.
+                </p>
+            </div>
+        </article>
+
+        <article class="discover-card">
+            <img
+                src="images/discover/observatorio.jpg"
+                alt="Municipal Observatory of Campinas"
+                width="400"
+                height="250"
+                loading="lazy">
+
+            <div class="discover-card-content">
+                <h2>Municipal Observatory</h2>
+                <address>Joaquim Egídio, Campinas, São Paulo</address>
+                <p>
+                    Discover astronomy and enjoy a different
+                    experience outside the city center.
+                </p>
+            </div>
+        </article>
+
+    </section>
+
+</main>
+
+<footer class="site-footer">
+
+    <div class="directory-footer-contact">
+        <h2>Campinas Chamber of Commerce</h2>
+        <p>Campinas, São Paulo, Brazil</p>
+        <p>Email: info@campinaschamber.org</p>
+        <p>Phone: (19) 3234-0000</p>
+    </div>
+
+    <div class="social-links">
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YT</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+    </div>
+
+    <div class="copyright">
+        <p>&copy; <span id="currentyear"></span> Campinas Chamber of Commerce</p>
+        <p>Rebecca Vicente | WDD 231</p>
+        <p>Campinas, São Paulo, Brazil</p>
+    </div>
+
+    <p class="last-modified">
+        Last Modification: <span id="lastModified"></span>
+    </p>
+
+</footer>
+
+<script>
+    const visitMessage = document.querySelector("#visit-message");
+    const lastVisit = localStorage.getItem("lastVisit");
+    const currentVisit = Date.now();
+
+    const oneDay = 24 * 60 * 60 * 1000;
+
+    if (!lastVisit) {
+        visitMessage.textContent =
+            "Welcome! Let us help you discover Campinas.";
+    } else {
+        const daysSinceVisit = Math.floor(
+            (currentVisit - Number(lastVisit)) / oneDay
+        );
+
+        if (daysSinceVisit < 1) {
+            visitMessage.textContent =
+                "Back so soon! Awesome!";
+        } else if (daysSinceVisit === 1) {
+            visitMessage.textContent =
+                "You last visited 1 day ago.";
+        } else {
+            visitMessage.textContent =
+                `You last visited ${daysSinceVisit} days ago.`;
+        }
+    }
+
+    localStorage.setItem("lastVisit", currentVisit);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,575 @@
+/* =================================
+   MOBILE FIRST DESIGN
+   (the reset lives in normalize.css)
+================================= */
+
+:root {
+    --navy: #173b63;
+    --blue: #24639a;
+    --pale-blue: #eaf2f9;
+    --light: #f5f7fa;
+    --white: #ffffff;
+    --ink: #202b36;
+    --muted: #536273;
+    --border: #cbd5df;
+    --focus: #f0bd4a;
+    --shadow: 0 2px 8px rgb(23 59 99 / 10%);
+}
+
+body {
+    min-width: 320px;
+    font-family: "Roboto", sans-serif;
+    color: var(--ink);
+    background: var(--light);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+/* KEYBOARD ACCESSIBILITY */
+
+:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 3px;
+}
+
+/* =================================
+   HEADER
+================================= */
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    color: var(--white);
+    background: var(--navy);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.brand img {
+    flex-shrink: 0;
+}
+
+.brand span {
+    overflow-wrap: anywhere;
+}
+
+/* HAMBURGER MENU */
+
+.menu-toggle {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--white);
+    border-radius: 6px;
+    color: var(--white);
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+    content: "";
+}
+
+.menu-icon {
+    position: relative;
+}
+
+.menu-icon::before {
+    position: absolute;
+    top: -7px;
+}
+
+.menu-icon::after {
+    position: absolute;
+    top: 7px;
+}
+
+/* NAVIGATION */
+
+.primary-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.5rem 1rem 1rem;
+    background: var(--navy);
+}
+
+.primary-nav.open {
+    display: flex;
+}
+
+.primary-nav a {
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.primary-nav a[aria-current="page"] {
+    color: var(--navy);
+    background: var(--white);
+}
+
+.primary-nav a:hover,
+.primary-nav a:focus-visible {
+    color: var(--navy);
+    background: var(--pale-blue);
+}
+
+/* =================================
+   MAIN CONTENT (shared by all pages)
+================================= */
+
+main {
+    width: min(100% - 2rem, 1100px);
+    margin: 1.5rem auto 2.5rem;
+}
+
+h1 {
+    margin: 0 0 1rem;
+    color: var(--navy);
+    font-size: clamp(1.8rem, 5vw, 2.4rem);
+}
+
+/* =================================
+   FOOTER
+================================= */
+
+.site-footer {
+    display: grid;
+    justify-items: center;
+    gap: 0.8rem;
+    padding: 1.5rem 1rem;
+    color: var(--white);
+    background: var(--navy);
+    text-align: center;
+}
+
+.directory-footer-contact h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+}
+
+.directory-footer-contact p {
+    margin: 0 0 0.3rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.social-links a {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+    color: var(--navy);
+    background: var(--white);
+}
+
+.copyright p,
+.last-modified {
+    margin: 0.15rem 0;
+}
+
+.last-modified {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    font-size: 0.9rem;
+}
+
+/* =================================
+   CHAMBER DIRECTORY
+================================= */
+
+.directory-intro {
+    margin-bottom: 1.5rem;
+}
+
+/* VIEW BUTTONS */
+
+.directory-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.directory-view-button {
+    padding: 0.7rem 1.5rem;
+    border: 1px solid var(--navy);
+    border-radius: 5px;
+    background: var(--white);
+    color: var(--navy);
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.directory-view-button:hover,
+.directory-view-button.active {
+    background: var(--navy);
+    color: var(--white);
+}
+
+/* GRID */
+
+.members-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* BUSINESS CARDS */
+
+.member-card {
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--pale-blue);
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.member-card h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--navy);
+}
+
+.member-tagline {
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+}
+
+.member-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+    text-align: left;
+}
+
+.member-content img {
+    flex-shrink: 0;
+    width: 110px;
+    height: 110px;
+    border-radius: 5px;
+    background: var(--white);
+    object-fit: contain;
+}
+
+.member-information {
+    min-width: 0;
+}
+
+.member-information p {
+    margin-bottom: 0.6rem;
+    font-size: 0.85rem;
+}
+
+.member-information a,
+.member-level {
+    color: var(--navy);
+    font-weight: 700;
+}
+
+/* LIST VIEW */
+
+.members-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.members-list .member-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    border-bottom-width: 0;
+    text-align: left;
+}
+
+.members-list .member-card:last-child {
+    border-bottom-width: 1px;
+}
+
+.members-list .member-tagline,
+.members-list .member-content img {
+    display: none;
+}
+
+.members-list .member-content {
+    padding-top: 0.5rem;
+}
+
+.members-list .member-information {
+    width: 100%;
+}
+
+/* SMALL SCREEN ADJUSTMENTS */
+
+@media (max-width: 450px) {
+
+    .member-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .members-list .member-content {
+        text-align: left;
+    }
+}
+
+/* =================================
+   CHAMBER HOME PAGE
+================================= */
+
+/* HERO */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background: var(--navy);
+}
+
+.hero > img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    color: var(--white);
+    background: rgb(0 0 0 / 48%);
+    text-align: center;
+}
+
+.hero-content h2 {
+    max-width: 650px;
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    line-height: 1.2;
+}
+
+.hero-content p {
+    max-width: 500px;
+    margin: 0;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.85rem 1.5rem;
+    border-radius: 6px;
+    color: var(--white);
+    background: var(--blue);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.hero-button:hover,
+.hero-button:focus-visible {
+    background: var(--navy);
+    outline: 2px solid var(--white);
+}
+
+/* HOME SECTIONS */
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.home-section {
+    padding: 1.2rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.home-section h2 {
+    margin-top: 0;
+    padding-bottom: 0.7rem;
+    border-bottom: 2px solid var(--pale-blue);
+    color: var(--navy);
+}
+
+/* EVENTS */
+
+.event-card {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.event-card:last-child {
+    border-bottom: none;
+}
+
+.event-card h3 {
+    margin: 0 0 0.3rem;
+    color: var(--blue);
+}
+
+.event-card p {
+    margin: 0.3rem 0;
+}
+
+/* WEATHER */
+
+#current-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem;
+    text-align: center;
+}
+
+#current-weather p {
+    margin: 0.2rem 0;
+}
+
+.weather-temperature {
+    color: var(--navy);
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.weather-description {
+    text-transform: capitalize;
+}
+
+.weather-section h3 {
+    color: var(--navy);
+    text-align: center;
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.forecast-card {
+    padding: 0.5rem;
+    border-radius: 6px;
+    background: var(--pale-blue);
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.forecast-card h4 {
+    margin: 0 0 0.3rem;
+    font-size: 0.85rem;
+}
+
+.forecast-card p {
+    margin: 0;
+    font-weight: 700;
+}
+
+.forecast-card .weather-description {
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+/* BUSINESS SPOTLIGHTS */
+
+.spotlights-section {
+    margin-top: 1.5rem;
+}
+
+.spotlight-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.spotlight-card {
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--light);
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.spotlight-card h3 {
+    margin: 0;
+    color: var(--navy);
+}
+
+.spotlight-card p {
+    margin: 0.4rem 0;
+}
+
+.spotlight-tagline {
+    color: var(--muted);
+}
+
+.spotlight-card img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    border-radius: 6px;
+    background: var(--white);
+    object-fit: contain;
+}
+
+.spotlight-card a {
+    color: var(--navy);
+    font-weight: 700;
+}
+
+.spotlight-level {
+    color: var(--blue);
+    font-weight: 700;
+}
