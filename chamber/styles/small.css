@@ -574,3 +574,214 @@ h1 {
     color: var(--blue);
     font-weight: 700;
 }
+
+/* =================================
+   JOIN PAGE AND THANK YOU PAGE
+================================= */
+
+.join-intro {
+    margin-bottom: 1.5rem;
+    color: var(--muted);
+}
+
+.join-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* FORM */
+
+.join-form {
+    display: grid;
+    gap: 1.1rem;
+    padding: 1.2rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.join-form label {
+    display: grid;
+    gap: 0.35rem;
+    color: var(--navy);
+    font-weight: 700;
+}
+
+.join-form input:not([type="hidden"]):not([type="submit"]),
+.join-form select,
+.join-form textarea {
+    width: 100%;
+    padding: 0.7rem 0.8rem;
+    border: 1px solid var(--muted);
+    border-radius: 5px;
+    color: var(--ink);
+    background: var(--white);
+    font: inherit;
+    font-weight: 400;
+}
+
+.join-form textarea {
+    resize: vertical;
+}
+
+.join-form input:user-invalid,
+.join-form select:user-invalid {
+    border-color: #b3261e;
+}
+
+.form-submit {
+    padding: 0.85rem 1.5rem;
+    border: 0;
+    border-radius: 6px;
+    color: var(--white);
+    background: var(--blue);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+}
+
+.form-submit:hover,
+.form-submit:focus-visible {
+    background: var(--navy);
+}
+
+/* MEMBERSHIP CARDS */
+
+.level-cards {
+    display: grid;
+    gap: 1rem;
+    align-content: start;
+}
+
+.level-cards h2 {
+    margin: 0;
+    color: var(--navy);
+}
+
+.level-card {
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--border);
+    border-left-width: 6px;
+    border-radius: 8px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+
+    /* animation on first load, staggered by card */
+    opacity: 0;
+    animation: card-in 0.7s ease-out forwards;
+}
+
+.level-card h3 {
+    margin: 0 0 0.3rem;
+    color: var(--navy);
+}
+
+.level-card p {
+    margin: 0 0 0.6rem;
+}
+
+.level-card a {
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.level-np     { border-left-color: #6b8e6b; animation-delay: 0.1s; }
+.level-bronze { border-left-color: #b0703c; animation-delay: 0.3s; }
+.level-silver { border-left-color: #8a96a3; animation-delay: 0.5s; }
+.level-gold   { border-left-color: #d4a017; animation-delay: 0.7s; }
+
+@keyframes card-in {
+    from {
+        opacity: 0;
+        transform: translateX(2rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .level-card {
+        opacity: 1;
+        animation: none;
+    }
+}
+
+/* MODALS */
+
+dialog {
+    width: min(90%, 460px);
+    padding: 0;
+    border: 0;
+    border-radius: 10px;
+    color: var(--ink);
+    background: var(--white);
+    box-shadow: 0 10px 30px rgb(0 0 0 / 35%);
+}
+
+dialog::backdrop {
+    background: rgb(23 59 99 / 60%);
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-body h2 {
+    margin-top: 0;
+    color: var(--navy);
+}
+
+.modal-close {
+    padding: 0.6rem 1.2rem;
+    border: 1px solid var(--navy);
+    border-radius: 5px;
+    color: var(--navy);
+    background: var(--white);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+}
+
+.modal-close:hover,
+.modal-close:focus-visible {
+    color: var(--white);
+    background: var(--navy);
+}
+
+/* THANK YOU PAGE */
+
+.application-summary {
+    margin-bottom: 1.5rem;
+    padding: 1.2rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.application-summary h2 {
+    margin-top: 0;
+    color: var(--navy);
+}
+
+.application-summary dl {
+    display: grid;
+    gap: 0.8rem;
+    margin: 0;
+}
+
+.application-summary dt {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.application-summary dd {
+    margin: 0;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
