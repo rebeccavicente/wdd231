@@ -1,3 +1,7 @@
+// ==========================================
+// THANK YOU PAGE
+// ==========================================
+
 const params = new URLSearchParams(window.location.search);
 
 const fields = ["fname", "lname", "email", "phone", "organization"];

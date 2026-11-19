@@ -82,6 +82,19 @@
     .spotlight-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    /* JOIN PAGE: form on the left, cards on the right */
+
+    .join-layout {
+        grid-template-columns: 1.3fr 0.7fr;
+        align-items: start;
+    }
+
+    /* THANK YOU PAGE */
+
+    .application-summary dl {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* LARGE DESKTOP */
@@ -104,19 +117,3 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
-/* =================================
-   JOIN PAGE 
-================================= */
-
-    /* JOIN PAGE: form on the left, cards on the right */
-
-    .join-layout {
-        grid-template-columns: 1.3fr 0.7fr;
-        align-items: start;
-    }
-
-    /* THANK YOU PAGE */
-
-    .application-summary dl {
-        grid-template-columns: repeat(2, 1fr);
-    }
