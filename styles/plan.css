@@ -1,0 +1,187 @@
+:root {
+  --moss: #1f3d2b;
+  --fern: #2f6b3f;
+  --mint: #eaf4ec;
+  --white: #ffffff;
+  --sun: #e9b949;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans 3", Arial, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--moss);
+  background-color: var(--mint);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Bricolage Grotesque", Arial, sans-serif;
+  line-height: 1.2;
+}
+
+header {
+  background-color: var(--moss);
+  color: var(--white);
+  padding: 2rem 1rem;
+  border-bottom: 0.5rem solid var(--sun);
+}
+
+header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 2.2rem;
+}
+
+header p {
+  margin: 0;
+}
+
+nav {
+  background-color: var(--fern);
+  padding: 0.5rem 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  color: var(--white);
+  font-weight: 600;
+}
+
+nav a:focus-visible,
+nav a:hover {
+  background-color: var(--sun);
+  color: var(--moss);
+}
+
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+section {
+  background-color: var(--white);
+  border-left: 0.4rem solid var(--fern);
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+}
+
+section h2 {
+  margin-top: 0;
+  color: var(--fern);
+}
+
+a {
+  color: var(--fern);
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+/* Color scheme section */
+.swatches {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  padding: 0;
+  list-style: none;
+}
+
+.swatches li {
+  border: 2px solid var(--moss);
+  margin: 0;
+}
+
+.swatch {
+  height: 4rem;
+}
+
+.swatch.moss {
+  background-color: var(--moss);
+}
+
+.swatch.fern {
+  background-color: var(--fern);
+}
+
+.swatch.mint {
+  background-color: var(--mint);
+  border-bottom: 2px solid var(--moss);
+}
+
+.swatch.sun {
+  background-color: var(--sun);
+}
+
+.swatch.white {
+  background-color: var(--white);
+  border-bottom: 2px solid var(--moss);
+}
+
+.swatches div:last-child {
+  padding: 0.5rem 0.75rem;
+}
+
+.swatches strong {
+  display: block;
+}
+
+/* Typography section */
+.heading-sample {
+  font-family: "Bricolage Grotesque", Arial, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0.25rem 0;
+}
+
+.body-sample {
+  font-family: "Source Sans 3", Arial, sans-serif;
+  margin: 0.25rem 0;
+}
+
+/* Wireframe section */
+.wireframes {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+figure {
+  margin: 0;
+  border: 2px dashed var(--fern);
+  padding: 0.75rem;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+footer {
+  background-color: var(--moss);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
